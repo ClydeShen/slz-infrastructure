@@ -11,7 +11,7 @@ variable "AWS_SECRET_ACCESS_KEY" {
 }
 
 variable "AWS_REGION" {
-  dedefault   = "ap-southeast-2"
+  default     = "ap-southeast-2"
   description = "Sydney Region"
 }
 
