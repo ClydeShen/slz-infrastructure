@@ -9,3 +9,7 @@ variable "lambda_functions" {
   default     = ["openai", "some"]
   description = "list of lambda functions"
 }
+
+variable "LAMBDA_RUNTIME" {
+  type = string
+}
