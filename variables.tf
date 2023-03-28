@@ -15,3 +15,7 @@ variable "ENV" {
   description = "Environment"
 }
 
+variable "LAMBDA_RUNTIME" {
+  default     = "nodejs16.x"
+  description = "Lambda Runtime"
+}
