@@ -1,11 +1,7 @@
 # config s3 bucket
 resource "aws_s3_bucket" "slz-lambda-functions" {
-  bucket      = "slz-lambda-functions"
-  acl         = "private"
-  description = "S3 Bucket for Lambda Functions"
-  lifecycle {
-    prevent_destroy = false # set to true to prevent accidental deletion
-  }
+  bucket = "slz-lambda-functions"
+  acl    = "private"
 }
 
 # config s3 bucket object
