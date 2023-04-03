@@ -1,7 +1,13 @@
+# module for s3
+module "s3" {
+  source = "./modules/s3"
+}
+
 # import module of lambda
 module "lambda" {
-  source         = "./modules/lambda"
-  LAMBDA_RUNTIME = var.LAMBDA_RUNTIME
+  source          = "./modules/lambda"
+  LAMBDA_RUNTIME  = var.LAMBDA_RUNTIME
+  lambda_zip_file = module.s3.s3_bucket_object_key
   # # pass in the s3 bucket name
   # s3_bucket_name = module.s3.s3_bucket_name
   # # pass in the s3 bucket object key
@@ -14,8 +20,4 @@ module "lambda" {
   # lambda_functions = var.lambda_functions
 }
 
-# module for s3
-module "s3" {
-  source = "./modules/s3"
-}
 

@@ -3,7 +3,7 @@
 resource "aws_lambda_function" "openai" {
   function_name = "openai"
   description   = "Lambda Function for OpenAI"
-  filename      = var.lambda_zip_file_path
+  filename      = var.lambda_zip_file
   handler       = "openai.handler"
   role          = aws_iam_role.lambda_role.arn
   runtime       = var.LAMBDA_RUNTIME
@@ -22,7 +22,7 @@ resource "aws_lambda_function" "openai" {
 resource "aws_lambda_function" "some" {
   function_name = "some"
   description   = "Lambda Function for Some"
-  filename      = var.lambda_zip_file_path
+  filename      = var.lambda_zip_file
   handler       = "some.handler"
   role          = aws_iam_role.lambda_role.arn
   runtime       = var.LAMBDA_RUNTIME
