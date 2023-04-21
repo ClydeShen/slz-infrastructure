@@ -1,16 +1,21 @@
-# variable for lambda_zip_file_path
-
-
-# variables for lambda functions, e.g. openai, some
-variable "lambda_functions" {
-  default     = ["openai", "some"]
-  description = "list of lambda functions"
+variable "LAMBDA_RUNTIME" {
+  default     = "nodejs16.x"
+  description = "Lambda Runtime"
 }
 
-variable "LAMBDA_RUNTIME" {
+variable "function_name" {
   type = string
 }
 
-variable "lambda_zip_file" {
+variable "description" {
+  type = string
+}
+
+variable "role_arn" {
+  type = string
+}
+
+
+variable "lambda_bucket_id" {
   type = string
 }

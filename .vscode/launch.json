@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "terraform",
+      "request": "launch",
+      "name": "Terraform Init",
+      "command": "terraform",
+      "args": ["init", "-var-file=terraform.tfvars"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "terraform",
+      "request": "launch",
+      "name": "Terraform Plan",
+      "command": "terraform",
+      "args": ["plan", "-var-file=terraform.tfvars"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

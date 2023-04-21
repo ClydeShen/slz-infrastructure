@@ -1,8 +1,3 @@
-# Description: Outputs for S3 module
-output "s3_bucket_name" {
-  value = aws_s3_bucket.slz-lambda-functions.bucket
-}
-
-output "s3_bucket_object_key" {
-  value = aws_s3_bucket_object.slz-lambda-fns-zip.key
+output "s3_bucket_id" {
+  value = aws_s3_bucket.slz-lambda-functions.id
 }

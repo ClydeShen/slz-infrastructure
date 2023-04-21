@@ -14,6 +14,6 @@ NC='\033[0m' # No Color
 
 
 echo "Running ${BLUE}terraform init${NC}"
-terraform init
+terraform init -var-file=terraform.tfvars
 echo "Running ${BLUE}terraform plan${NC}"
-terraform plan -out=plan.out
+terraform plan -var-file=terraform.tfvars -out=plan.out
