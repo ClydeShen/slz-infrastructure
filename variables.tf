@@ -10,6 +10,11 @@ variable "aws_secret_key" {
   description = "AWS Secret Key"
 }
 
+variable "AWS_ACCOUNT_ID" {
+  default     = "063296370403"
+  description = "AWS Account ID"
+}
+
 variable "AWS_REGION" {
   default     = "ap-southeast-2"
   description = "Sydney Region"

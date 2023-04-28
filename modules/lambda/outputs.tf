@@ -1,4 +1,9 @@
-# Description: Outputs for the lambda module
-# output "lambda_zip_file_paths" {
-#   value = [for name, _ in var.lambdas : data.archive_file.lambda_zip[name].output_path]
-# }
+output "lambda_functions" {
+  value = {
+    for lambda in aws_lambda_function.this : lambda.function_name => {
+      name       = lambda.function_name
+      arn        = lambda.arn
+      invoke_arn = lambda.invoke_arn
+    }
+  }
+}
